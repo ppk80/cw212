@@ -13,11 +13,7 @@
 			@import url(https://themes.googleusercontent.com/fonts/css?kit=1yFIsPqDhsybkAhiTXEJgYe_u6852Wu1zgxFhhFcgm73rGVtsTkPsbDajuO5ueQw);
 			
 			body {
-				background: radial-gradient(#15032f 0%, #26304a 20%, #593e50 80%, #606136 95%);
-				color: #7ffad9;
-				font-family: "Exo 2";
-				width: 100%;
-				height: 100%;
+				background: radial-gradient(#15032f 0%, #26304a 20%, #593e50 80%, #694f50 85%, #606136 95%);
 				<!-- background: radial-gradient(#26304a, #593e50); -->
 			}
 					
@@ -29,8 +25,12 @@
 			}
 
 			.responsive-image {
-			  max-width: 30%; /* The image adjusts to the container's width */
+			  width: 40%; /* The image adjusts to the container's width */
 			  height: auto; /* Maintains the aspect ratio */
+			}
+
+			.responsive-imager {
+			  width: 100%
 			}
 
 			.centered-container {
@@ -38,6 +38,8 @@
 			  justify-content: center;  /* Centers horizontally */
 			  align-items: center;  /* Centers vertically */
 			  height: 100vh;  /* Full viewport height */
+			  z-index: 2;
+			  margin:0 auto;
 			}
 
 			.centered-div {
@@ -47,11 +49,38 @@
 			.title-container {
 				padding: 2vh;
 			}
+			
+			.background-image-container {
+			  position: fixed;  /* The image stays fixed in place */
+			  top: 1;  /* Aligns to the top */
+			  left: 1;  /* Aligns to the left */
+			  border: 0;
+			  padding: 0;
+			  margin:0 auto;
+			  width:25%;
+			}
+
+			.background-image-containerr {
+			  align-items:right;
+			  position: fixed;  /* The image stays fixed in place */
+			  bottom: 0;  /* Aligns to the top */
+			  right: 0;  /* Aligns to the left */
+			  border: 0;
+			  margin:0 auto;
+			  width:20%; 
+			}
+
 
 		</style>
 	</head>
 
 	<body>
+		<div class="background-image-container">
+				<img src="cw221.png" class="responsive-imager">
+		</div>
+		<div class="background-image-containerr">
+				<img src="xyhlogocw221.png" class="responsive-imager">
+		</div>
 		<div class="centered-container">
 		  <div class="centered-div">
 			<div class="title-container">
@@ -77,5 +106,6 @@
 			</div>
 		  </div>
 		</div>
+
 	</body>
 </html>
